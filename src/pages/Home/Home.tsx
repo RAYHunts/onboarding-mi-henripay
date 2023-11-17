@@ -58,24 +58,29 @@ const Home = () => {
         </div>
         <div className={s._Backdrop}>
           <div className={s._Container}>
-            <div>
-              <h1 className="secondary">
-                Selling NFTs
-                <br />
-                <span className="white">Made Easy As a Pie.</span>
-              </h1>
-              <p>
-                Selling NFTs is not easy. 99% of your potential customers don't have cryptocurrencies at hand and thus drop out. Until now, Because with HenriPay you can sell NFTs to anyone - with their preferred local payment method.
-                Imagine how your market potential just multiplied!
-              </p>
+            <div className={s._Hero}>
+              <div className={s._HeroText}>
+                <h1 className="secondary display-1">
+                  Selling NFTs
+                  <br />
+                  <span className="white">Made Easy As a Pie.</span>
+                </h1>
+                <p className="white subheading-1">
+                  Selling NFTs is not easy. 99% of your potential customers don't have cryptocurrencies at hand and thus drop out. Until now, Because with HenriPay you can sell NFTs to anyone - with their preferred local payment method.
+                  Imagine how your market potential just multiplied!
+                </p>
+                <div>
+                  <button>Use HenriPay</button>
+                  <button>More information</button>
+                </div>
+              </div>
+              <img src={HeroImage} alt="Henripay" width="642px" height="377px" />
             </div>
-            <img src={HeroImage} alt="Henripay" />
           </div>
         </div>
         <HeroBlobLeft className={s._LeftBlob} />
         <HeroBlobRight className={s._RightBlob} />
       </div>
-      <h1>Home</h1>
     </div>
   );
 };

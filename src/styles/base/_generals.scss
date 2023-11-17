@@ -1,0 +1,23 @@
+@use "../abstracts/variables"as v;
+
+* {
+    font-family: Inter, sans-serif;
+}
+
+button {
+    background: linear-gradient(274deg, #FC4B2C 0%, #FFB60E 100%);
+    padding: 14px 32px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    position: relative;
+
+    
+    &:hover {
+        outline: v.$primary;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

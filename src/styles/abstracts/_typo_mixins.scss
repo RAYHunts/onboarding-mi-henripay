@@ -1,0 +1,111 @@
+@use "variables" as v;
+
+@mixin display-1 {
+    line-height: 1.5;
+    font-size: 56px;
+    font-weight: 600;
+}
+
+@mixin display-2 {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5;
+    text-transform: capitalize;
+}
+
+@mixin heading-1 {
+    // paste here
+    line-height: 1.5;
+}
+
+@mixin heading-2 {
+    // paste here
+    line-height: 1.5;
+}
+
+@mixin heading-3 {
+    // paste here
+    line-height: 1.5;
+}
+
+@mixin heading-4 {
+    // paste here
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+@mixin heading-5 {
+    // paste here
+    line-height: 1.5;
+}
+
+@mixin heading-6 {
+    // paste here
+    line-height: 1.5;
+}
+
+@mixin subheading-1 {
+    // paste here
+    line-height: 1.6;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+@mixin subheading-2 {
+    // paste here
+    line-height: 1.5;
+}
+
+@mixin subheading-3 {
+    // paste here
+    line-height: 1.5;
+}
+
+@mixin button-1 {
+    // paste here
+    line-height: 1.5;
+}
+
+@mixin button-2 {
+    // paste here
+    line-height: 1.5;
+}
+
+@mixin button-3 {
+    // paste here
+    line-height: 1.5;
+}
+
+@mixin paragraph {
+    // paste here
+    line-height: 1.5;
+}
+
+@mixin body-1 {
+    // paste here
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+@mixin body-2 {
+    // paste here
+    line-height: 1.5;
+}
+
+@mixin body-3 {
+    // paste here
+    line-height: 1.5;
+}
+
+@mixin small-1 {
+    // paste here
+    line-height: 1.5;
+}
+
+@mixin small-2 {
+    // paste here
+    line-height: 1.5;
+}
