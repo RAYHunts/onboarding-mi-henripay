@@ -1,0 +1,35 @@
+@use "sass:map";
+
+/**
+* Font families
+*/
+$poppins: "Poppins", sans-serif;
+$inter: "Inter", sans-serif;
+
+/**
+* Breakpoint -------------------- 
+*/
+$mobile-down: 600px;
+$mobile-up: 601px;
+$tablet-down: 1024px;
+$tablet-up: 1025px;
+$laptop-down: 1440px;
+$laptop-up: 1441px;
+/**
+
+* Color -------------------- 
+*/
+
+$colors: (
+	"white": #ffffff,
+	"black": #1E1E2C,
+    "primary": #FC4B2C,
+    "secondary": #FFB60E,
+    "green": #00C48C,
+);
+
+$white: map.get($colors, "white");
+$black: map.get($colors, "black");
+$primary: map.get($colors, "primary");
+$secondary: map.get($colors, "secondary");
+$green: map.get($colors, "green");
