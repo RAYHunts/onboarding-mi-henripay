@@ -1,0 +1,63 @@
+@use "/src/styles/abstracts/variables" as v;
+
+._Wrapper {
+    padding: 3px;
+    border-radius: 50px;
+    width: fit-content;
+    border: 2px solid transparent;
+
+    &:hover {
+        border-color: v.$primary;
+
+        &:has(.ghost) {
+            border-color: v.$white;
+        }
+
+        ._Button {
+            color: v.$white;
+        }
+    }
+
+    ._Button {
+        display: flex;
+        padding: 14px 32px;
+        align-items: flex-start;
+        gap: 10px;
+        border: none;
+        outline: none;
+        border-radius: 50px;
+        background: linear-gradient(274deg, v.$primary 0%, v.$secondary 100%);
+        font-size: 16px;
+
+        &:has(._StartIcon),
+        &:has(._EndIcon) {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            &:has(._StartIcon) {
+               padding-left: 20px;
+            }
+
+            &:has(._EndIcon) {
+                padding-right: 20px;
+            }
+
+            ._StartIcon,
+            ._EndIcon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        ._IconOnly {
+            padding: 14px;
+        }
+
+        &.ghost {
+            background: transparent;
+            border: 2px solid transparent;
+        }
+    }
+}

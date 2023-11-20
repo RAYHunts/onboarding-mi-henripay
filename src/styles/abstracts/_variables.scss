@@ -26,6 +26,7 @@ $colors: (
     "primary": #FC4B2C,
     "secondary": #FFB60E,
     "green": #00C48C,
+    "red": #E52B20,
 );
 
 $white: map.get($colors, "white");
@@ -33,3 +34,4 @@ $black: map.get($colors, "black");
 $primary: map.get($colors, "primary");
 $secondary: map.get($colors, "secondary");
 $green: map.get($colors, "green");
+$red: map.get($colors, "red");

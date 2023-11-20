@@ -9,27 +9,27 @@
 }
 
 
-.h1 {
+.h1, h1 {
 	@include typo.heading-1;
 }
 
-.h2 {
+.h2, h2 {
 	@include typo.heading-2;
 }
 
-.h3 {
+.h3, h3 {
 	@include typo.heading-3;
 }
 
-.h4 {
+.h4, h4 {
 	@include typo.heading-4;
 }
 
-.h5 {
+.h5, h5 {
 	@include typo.heading-5;
 }
 
-.h6 {
+.h6, h6 {
 	@include typo.heading-6;
 }
 

@@ -7,8 +7,8 @@ const HeroBlobLeft = ({className}:{className?:string}) => {
       />
       <defs>
         <linearGradient id="paint0_linear_2_2" x1="225.309" y1="295.418" x2="-13.1326" y2="284.38" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#FC4B2C" />
-          <stop offset="1" stop-color="#FFB60E" />
+          <stop stopColor="#FC4B2C" />
+          <stop offset="1" stopColor="#FFB60E" />
         </linearGradient>
       </defs>
     </svg>

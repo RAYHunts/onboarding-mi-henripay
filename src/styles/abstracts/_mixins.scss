@@ -1,0 +1,21 @@
+@use 'variables' as v;
+
+@mixin container() {
+	max-width: 1328px;
+	margin-inline: auto;
+
+	@media (max-width: 1366px) {
+		max-width: 1194px;
+		padding-inline: 16px;
+	}
+
+	@media (max-width: v.$tablet-down) {
+		max-width: 100%;
+	}
+}
+
+// @mixin animation($name) {
+// 	@keyframes #{$name} {
+// 		@content;
+// 	}
+// }

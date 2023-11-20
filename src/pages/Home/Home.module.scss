@@ -1,3 +1,4 @@
+@use "/src/styles/abstracts/mixins" as m;
 ._HeroWrapper {
     height: 100vh;
     width: 100%;
@@ -5,6 +6,7 @@
     overflow: hidden;
 
     ._Backdrop {
+        padding-top: 120px;
         background-color: rgba(46, 46, 46, 0.1);
         position: relative;
         backdrop-filter: blur(100px);
@@ -13,19 +15,23 @@
         height: 100%;
 
         ._Container {
-            max-width: 1200px;
+            @include m.container;
             margin: 0 auto;
             padding: 0 20px;
 
             ._Hero {
                 display: flex;
                 align-items: center;
-                
-                ._HeroText{
+
+                ._HeroText {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
                     gap: 20px;
+                    ._Buttons{
+                        display: flex;
+                        align-items: center;
+                    }
                 }
 
 
@@ -39,7 +45,7 @@
 
     }
 
-    svg {
+    ._LeftBlob,._RightBlob {
         position: absolute;
         z-index: 0;
 
