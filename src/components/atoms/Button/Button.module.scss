@@ -21,7 +21,8 @@
     ._Button {
         display: flex;
         padding: 14px 32px;
-        align-items: flex-start;
+        // align-items: flex-start;
+        height: fit-content;
         gap: 10px;
         border: none;
         outline: none;
@@ -57,7 +58,6 @@
 
         &.ghost {
             background: transparent;
-            border: 2px solid transparent;
         }
     }
 }

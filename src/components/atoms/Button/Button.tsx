@@ -5,8 +5,8 @@ import clsx from "clsx";
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   children: ReactNode;
-  startIcon?: ReactNode;
-  endIcon?: ReactNode;
+  starticon?: ReactNode;
+  endicon?: ReactNode;
   iconOnly?: boolean;
   variant?: "primary" | "secondary" | "tertiary" | "ghost";
 }
@@ -15,9 +15,9 @@ const Button = ({ children, className, variant = "primary", ...props }: IButtonP
   return (
     <div className={s._Wrapper}>
       <button className={clsx(s._Button, s[`${variant}`], className)} {...props}>
-        {props.startIcon && <span className={s._StartIcon}>{props.startIcon}</span>}
+        {props.starticon && <span className={s._StartIcon}>{props.starticon}</span>}
         {children}
-        {props.endIcon && <span className={s._EndIcon}>{props.endIcon}</span>}
+        {props.endicon && <span className={s._EndIcon}>{props.endicon}</span>}
       </button>
     </div>
   );

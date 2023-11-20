@@ -29,7 +29,7 @@ const Home = () => {
                       <Button>Use HenriPay</Button>
                       {/* <button>Use HenriPay</button> */}
                       {/* <button>More information</button> */}
-                      <Button className="white" variant="ghost" endIcon={<IcCaretDown/>}>More information</Button>
+                      <Button className="white" variant="ghost" endicon={<IcCaretDown/>}>More information</Button>
                     </div>
                   </div>
                   <img src={HeroImage} alt="Henripay" width="642px" height="377px" />
