@@ -1,11 +1,11 @@
 @use 'variables' as v;
 
 @mixin container() {
-	max-width: 1328px;
+	max-width: 1194px;
 	margin-inline: auto;
 
 	@media (max-width: 1366px) {
-		max-width: 1194px;
+		max-width: 100%;
 		padding-inline: 16px;
 	}
 

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import MainLogo from "../../../assets/svgs/MainLogo";
 import s from "./Navbar.module.scss";
-import Button from "../../atoms/Button/Button";
+import MainLogo from "@/components/atoms/Svgs/MainLogo";
+import Button from "@/components/atoms/Button/Button";
 
 const Navbar = () => {
   return (
@@ -16,10 +16,10 @@ const Navbar = () => {
         Testimonials
         HenriPay Ticketing
         Contact Us */}
-          <Link to="/">How it works</Link>
-          <Link to="/">How to get it</Link>
-          <Link to="/">Testimonials</Link>
-          <Link to="/">HenriPay Ticketing</Link>
+          <Link to="/" className="white">How it works</Link>
+          <Link to="/" className="white">How to get it</Link>
+          <Link to="/" className="white">Testimonials</Link>
+          <Link to="/" className="white">HenriPay Ticketing</Link>
           <Button>Contact Us</Button>
         </div>
       </div>

@@ -1,0 +1,100 @@
+@use "/src/styles/abstracts/mixins" as m;
+@use "/src/styles/abstracts/variables" as v;
+
+._Wrapper {
+    padding: 72px 0;
+
+    ._Container {
+        @include m.container;
+
+        border: 1px solid v.$primary;
+        overflow: hidden;
+        position: relative;
+        border-radius: 50px;
+
+        ._LeftCircle {
+            width: 421px;
+            height: 421px;
+            position: absolute;
+            left: -210px;
+            top: -100px;
+            display: block;
+            background-color: v.$primary;
+            border-radius: 50%;
+            filter: blur(150px);
+        }
+
+        ._RightCircle {
+            width: 385px;
+            height: 385px;
+            position: absolute;
+            right: calc(-385px / 2);
+            bottom: calc(-385px / 3);
+            display: block;
+            background-color: v.$secondary;
+            border-radius: 50%;
+            filter: blur(150px);
+        }
+
+        ._ContentContainer {
+            border-radius: 50px;
+            background: rgba(58, 58, 58, 0.5);
+            backdrop-filter: blur(100px);
+            position: relative;
+            z-index: 1;
+
+            ._Content {
+                padding: 60px 110px;
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+
+                ._Logo {
+                    // grid-column: span 3;
+                    place-self: center;
+                }
+
+                p {
+                    // grid-column: span 3;
+                    text-align: center;
+                }
+
+                ._LinksAndSocials {
+                    display: flex;
+                    justify-content: space-between;
+
+
+                    ._Links {
+                        align-self: flex-end;
+                        display: flex;
+                        gap: 20px;
+                    }
+
+                    ._Socials {
+                        place-self: end;
+
+                        ._Icons {
+                            margin-top: 16px;
+                            display: flex;
+                            gap: 40px;
+
+                            svg {
+                                transition: all 0.2s ease-in-out;
+
+                                &:hover {
+                                    stop {
+                                        stop-color: white !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+    }
+}

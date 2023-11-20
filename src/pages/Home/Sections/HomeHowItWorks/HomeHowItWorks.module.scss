@@ -1,0 +1,102 @@
+@use "/src/styles/abstracts/variables" as v;
+
+._HowItWorks {
+    padding: 96px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    ._LeftCircle {
+        display: block;
+        position: absolute;
+        width: 550px;
+        height: 550px;
+        background-color: v.$primary;
+        border-radius: 50%;
+        z-index: 0;
+        opacity: 50%;
+        left: -200px;
+        top: 0;
+        filter: blur(250px);
+    }
+
+    ._RightCircle {
+        display: block;
+        position: absolute;
+        width: 550px;
+        height: 550px;
+        background-color: v.$secondary;
+        border-radius: 50%;
+        z-index: 0;
+        opacity: 50%;
+        bottom: 0;
+        right: -200px;
+        filter: blur(250px);
+    }
+
+    ._Container {
+        position: relative;
+        overflow: hidden;
+
+        ._Comparation {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            gap: 62px;
+            margin-top: 126px;
+            padding: 68px 0;
+            position: relative;
+
+            ._WithoutHenriPay {
+                ._Maze {
+                    display: grid;
+                    grid-template-areas: stack;
+
+                    >svg {
+                        grid-area: stack;
+                        position: relative;
+                    }
+
+                    >:nth-child(2) {
+                        z-index: 1;
+                        top: -45px;
+                        right: -60px;
+                        animation: float 3s ease-in infinite alternate;
+                    }
+                }
+            }
+
+            ._Versus {
+                align-self: center;
+            }
+
+            ._WithHenriPay {
+                width: min-content;
+            }
+
+            ._Bedge {
+                position: relative;
+                top: -30px;
+                text-wrap: nowrap;
+                margin: 0 auto;
+            }
+        }
+
+        ._Integrate {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+}

@@ -1,6 +1,7 @@
-const MainLogo = () => {
+const MainLogo = ({ width = 203 }) => {
+  const height = width * 0.2079;
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={203} height={42} viewBox="0 0 203 42" fill="none">
+    <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 203 42" fill="none">
       <path
         fillRule="evenodd"
         clipRule="evenodd"

@@ -1,4 +1,10 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
 * {
     font-family: Inter, sans-serif;
+}
+
+.container {
+    @include m.container;
 }

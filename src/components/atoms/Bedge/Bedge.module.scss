@@ -1,0 +1,27 @@
+@use "/src/styles/abstracts/variables" as v;
+
+._Bedge {
+    padding: 4px 16px;
+    display: inline-flex;
+    border-radius: 16px;
+
+    &.primary {
+        background: v.$primary;
+        color: v.$white;
+    }
+
+    &.secondary {
+        background: v.$secondary;
+        color: v.$white;
+    }
+
+    &.red {
+        background: v.$red;
+        color: v.$white;
+    }
+
+    &.green {
+        background: v.$green;
+        color: v.$white;
+    }
+}
