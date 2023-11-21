@@ -4,7 +4,7 @@ import s from "./Bedge.module.scss";
 
 interface BedgeProps extends HTMLAttributes<HTMLSpanElement> {
   children: string;
-  variant?: "primary" | "secondary" | "green" | "red";
+  variant?: "primary" | "secondary" | "green" | "red" | "black";
   className?: string
 }
 const Bedge = ({ children, variant = "primary", className, ...props }: BedgeProps) => {

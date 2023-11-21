@@ -1,14 +1,14 @@
-
 import Navbar from "@/components/organisms/Navbar/Navbar";
 import s from "./Home.module.scss";
-import HomeHowItWorksSection from "./Sections/HomeHowItWorks/HomeHowItWorks.section";
 import Button from "@/components/atoms/Button/Button";
 import IcChevronDown from "@/components/atoms/Icons/IcChevronDown";
 import HeroBlobLeft from "@/components/atoms/Svgs/HeroBlobLeft";
 import HeroBlobRight from "@/components/atoms/Svgs/HeroBlobRight";
 import Footer from "@/components/organisms/Footer/Footer";
 import HeroImage from "@/assets/images/hero.gif";
-
+import HomeHowItWorksSection from "./components/HomeHowItWorksSection";
+import SupportedPaymentSection from "./components/HomeSupportedPaymentSection";
+import HomeCompatiblesSection from "./components/HomeCompatiblesSection";
 
 const Home = () => {
   return (
@@ -45,10 +45,16 @@ const Home = () => {
             <HeroBlobRight className={s._RightBlob} />
           </div>
         </section>
-        <section className={s._Features}>
-          <h4>compatible with</h4>
-        </section>
+        <HomeCompatiblesSection />
         <HomeHowItWorksSection />
+        <SupportedPaymentSection />
+        <section className={s._Contact}>
+          <h5 className="display-2 white">
+            Use HenriPay for your <br />
+            business.
+          </h5>
+          <Button>Contact Us</Button>
+        </section>
       </main>
       <Footer />
     </div>

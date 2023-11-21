@@ -10,15 +10,15 @@ import Button from "@/components/atoms/Button/Button";
 
 const HomeHowItWorksSection = () => {
   return (
-    <section className={s._HowItWorks}>
+    <section className={s._Wrapper}>
       <span className={s._LeftCircle}></span>
       <span className={s._RightCircle}></span>
       <div className={clsx(s._Container, "container")}>
         <h4>How it works</h4>
-        <h2 className="display-2 white">
+        <h3 className="display-2 white">
           The easiest way to sell <br />
           your NFTs in web3
-        </h2>
+        </h3>
         <p className="body-1 white">
           Knowing that Web3 is the future of the internet, we have designed HenriPay to "stand the future." We deliver the seamless, responsive, and fastest payment processing you have ever seen through a decentralized network. Even better,
           we receive payment in local currencies, coins, and any recognized payment option in the marketplace.

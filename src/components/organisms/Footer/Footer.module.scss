@@ -7,10 +7,21 @@
     ._Container {
         @include m.container;
 
-        border: 1px solid v.$primary;
+        // border: 1px solid v.$primary;
         overflow: hidden;
         position: relative;
         border-radius: 50px;
+        background: linear-gradient(274deg, v.$primary 0%, v.$secondary 100%);  
+        padding: 2px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: v.$black;
+            z-index: 0;
+            inset: 2px;
+            border-radius: 50px;
+        }
 
         ._LeftCircle {
             width: 421px;
@@ -38,7 +49,7 @@
 
         ._ContentContainer {
             border-radius: 50px;
-            background: rgba(58, 58, 58, 0.5);
+            background: rgba($color: v.$black, $alpha: 0.1);
             backdrop-filter: blur(100px);
             position: relative;
             z-index: 1;
@@ -47,7 +58,7 @@
                 padding: 60px 110px;
                 display: flex;
                 flex-direction: column;
-                gap: 40px;
+                gap: 36px;
 
                 ._Logo {
                     // grid-column: span 3;
@@ -60,6 +71,7 @@
                 }
 
                 ._LinksAndSocials {
+                    margin-top: 30px;
                     display: flex;
                     justify-content: space-between;
 

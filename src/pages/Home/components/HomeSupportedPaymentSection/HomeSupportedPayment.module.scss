@@ -1,0 +1,103 @@
+@use "/src/styles/abstracts/variables" as v;
+
+._Wrapper {
+    padding: 96px 0;
+    text-align: center;
+    h3 {
+        margin-bottom: 32px;
+    }
+    ._Container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+
+        ._Card {
+            width: 100%;
+            padding: 25px;
+            background-color: rgba($color: v.$black, $alpha: 0.1);
+            box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.15);
+            z-index: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            ._ImageWrapper {
+                position: relative;
+                width: fit-content;
+                margin-inline: auto;
+                padding-top: 71px;
+                padding-bottom: 35px;
+
+                ._Image {
+                    border-radius: 20px;
+                    box-shadow: 0px 0px 0px 1px #C4704C;
+                }
+
+                ._LeftPayment,
+                ._RightPayment {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 25px;
+                    position: absolute;
+
+                    ._PaymentWrapper {
+                        display: flex;
+                        justify-content: center;
+                        gap: 25px;
+                        width: calc(128px * 2 + 25px);
+                        flex-wrap: wrap;
+
+                        ._Payment {
+                            background-color: v.$white;
+                            border-radius: 10px;
+                            width: 128px;
+                            height: 74px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            box-shadow: 0px 0px 0px 5px rgba(v.$white, 0.25);
+                        }
+                    }
+                }
+
+                ._LeftPayment {
+                    left: -245px;
+                    top: 20px;
+                }
+
+                ._RightPayment {
+                    right: -245px;
+                    top: 20px;
+                }
+            }
+        }
+
+        ._Circle {
+            display: block;
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: linear-gradient(274deg, v.$primary 0%, v.$secondary 100%);
+            border-radius: 50%;
+            z-index: 0;
+            opacity: 50%;
+            filter: blur(175px);
+            pointer-events: none;
+
+            &._Left {
+                left: -160px;
+                bottom: -139px;
+            }
+
+            &._Right {
+                top: -122px;
+                right: -28px;
+            }
+        }
+    }
+
+
+}

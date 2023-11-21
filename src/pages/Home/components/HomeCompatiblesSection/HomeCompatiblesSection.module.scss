@@ -1,0 +1,33 @@
+._Compatibles {
+    text-align: center;
+    padding: 23px 0;
+    width: 100%;
+    overflow: hidden;
+    ._CompatiblesWrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 57px;
+        padding: 30px 0;
+        animation: marquee 30s linear infinite;
+        
+        &:hover {
+            animation-play-state: paused;
+        }
+        
+        > * {
+            flex-shrink: 0;
+            filter: grayscale(100%);
+            opacity: 0.5;
+        }
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
