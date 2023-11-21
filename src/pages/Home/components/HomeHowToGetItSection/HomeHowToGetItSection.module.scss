@@ -1,0 +1,47 @@
+@use "/src/styles/abstracts/variables" as v;
+
+._Wrapper {
+    text-align: center;
+
+    ._Content {
+
+        display: flex;
+        // flex-wrap: wrap;
+        gap: 63px;
+        justify-content: center;
+        align-items: center;
+        padding: 62px 0;
+
+        // image {
+        //     width: 100%;
+        //     height: 100%;
+        //     object-fit: cover;
+        // }
+        
+        ._Card {
+            padding: 33px;
+            width: 401px;
+            height: 416px;
+            background: rgba($color: v.$white, $alpha: 0.1);
+            border-radius: 23px;
+            flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
+
+            ._CardContent {
+                text-align: left;
+                width: 281px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            ._VrMan {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+
+}

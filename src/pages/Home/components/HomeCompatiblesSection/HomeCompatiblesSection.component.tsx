@@ -15,43 +15,11 @@ const HomeCompatiblesSection = () => {
   const firstElementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-
-
-  const parentSelector = parentRef.current;
-  const clone = parentSelector.innerHTML;
-  parentSelector?.insertAdjacentHTML("beforeend", clone);
-  parentSelector?.insertAdjacentHTML("beforeend", clone);
-
+    const parentSelector = parentRef.current;
+    const clone = parentSelector.innerHTML;
+    parentSelector?.insertAdjacentHTML("beforeend", clone);
+    parentSelector?.insertAdjacentHTML("beforeend", clone);
   }, []);
-
-  //   let i = 0;
-  //   const speed = 1; // Set your desired speed here
-
-  //   useEffect(() => {
-  //     const parentSelector = parentRef.current;
-  //     const firstElement = firstElementRef.current;
-
-  //     if (!parentSelector || !firstElement) return;
-
-  //     const clone = parentSelector.innerHTML;
-  //     parentSelector.insertAdjacentHTML("beforeend", clone);
-  //     parentSelector.insertAdjacentHTML("beforeend", clone);
-  //     function scrollMarquee() {
-  //       //   timestamp = timestamp || new Date().getTime();
-  //       firstElement.style.marginLeft = `-${i}px`;
-
-  //       if (i >= parentSelector.offsetWidth) {
-  //         i = 0;
-  //       }
-
-  //       i += speed;
-  //       requestAnimationFrame(scrollMarquee);
-  //     }
-
-  //     requestAnimationFrame(scrollMarquee);
-
-  //     return () => cancelAnimationFrame(scrollMarquee);
-  //   }, [speed]);
   return (
     <section className={s._Compatibles}>
       <h4>compatible with</h4>

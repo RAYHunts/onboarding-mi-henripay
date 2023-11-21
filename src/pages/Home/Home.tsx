@@ -5,10 +5,11 @@ import IcChevronDown from "@/components/atoms/Icons/IcChevronDown";
 import HeroBlobLeft from "@/components/atoms/Svgs/HeroBlobLeft";
 import HeroBlobRight from "@/components/atoms/Svgs/HeroBlobRight";
 import Footer from "@/components/organisms/Footer/Footer";
-import HeroImage from "@/assets/images/hero.gif";
+import HeroImage from "@/assets/images/hero.webm";
 import HomeHowItWorksSection from "./components/HomeHowItWorksSection";
-import SupportedPaymentSection from "./components/HomeSupportedPaymentSection";
+import HomeSupportedPaymentSection from "./components/HomeSupportedPaymentSection";
 import HomeCompatiblesSection from "./components/HomeCompatiblesSection";
+import HomeHowToGetItSection from "./components/HomeHowToGetItSection";
 
 const Home = () => {
   return (
@@ -38,7 +39,11 @@ const Home = () => {
                     </Button>
                   </div>
                 </div>
-                <img src={HeroImage} alt="Henripay" width="642px" height="377px" />
+
+                {/* <img src={HeroImage} alt="Henripay" width="642px" height="377px" /> */}
+                <video loop muted autoPlay width={642} height={377}>
+                  <source type="video/webm" src={HeroImage} />
+                </video>
               </div>
             </div>
             <HeroBlobLeft className={s._LeftBlob} />
@@ -47,7 +52,8 @@ const Home = () => {
         </section>
         <HomeCompatiblesSection />
         <HomeHowItWorksSection />
-        <SupportedPaymentSection />
+        <HomeSupportedPaymentSection />
+        <HomeHowToGetItSection />
         <section className={s._Contact}>
           <h5 className="display-2 white">
             Use HenriPay for your <br />
