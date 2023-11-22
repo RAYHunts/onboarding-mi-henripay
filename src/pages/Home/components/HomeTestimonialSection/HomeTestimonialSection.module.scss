@@ -1,0 +1,61 @@
+@use "/src/styles/abstracts/variables" as v;
+
+._Wrapper {
+    padding: 96px 0;
+    ._Container {
+        ._Content {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+
+            ._TextContent {
+                width: 346px;
+            }
+
+            ._Testimonials {
+                display: flex;
+                gap: 30px;
+
+
+                ._Testimonial {
+                    // width: 346px; 
+                    padding: 30px;
+                    width: calc(346px - 60px);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                    background-color: rgba($color: v.$white, $alpha: 0.1);
+                    border-radius: 20px;
+                    height: max-content;
+
+                    ._Header {
+                        display: flex;
+                        gap: 20px;
+                        align-items: center;
+
+                        ._Avatar {
+                            width: 48px;
+                            height: 48px;
+                            border-radius: 50%;
+                            overflow: hidden;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+
+                    }
+
+                    ._Footer {
+                        color: v.$white;
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+
+
+    }
+}

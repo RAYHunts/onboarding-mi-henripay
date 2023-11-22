@@ -4,13 +4,19 @@
 	max-width: 1194px;
 	margin-inline: auto;
 
-	@media (max-width: 1366px) {
+	@media (max-width: v.$laptop-down) {
 		max-width: 100%;
-		padding-inline: 16px;
+		margin-inline: 26px;
 	}
 
 	@media (max-width: v.$tablet-down) {
 		max-width: 100%;
+		margin-inline: 18px;
+	}
+
+	@media (max-width: v.$mobile-down) {
+		max-width: 100%;
+		margin-inline: 16px;
 	}
 }
 

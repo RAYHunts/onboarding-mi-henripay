@@ -17,6 +17,8 @@
 @mixin heading-1 {
     // paste here
     line-height: 1.5;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 @mixin heading-2 {
@@ -28,7 +30,11 @@
 
 @mixin heading-3 {
     // paste here
-    line-height: 1.5;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: v.$secondary;
 }
 
 @mixin heading-4 {

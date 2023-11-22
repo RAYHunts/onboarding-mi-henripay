@@ -1,0 +1,134 @@
+@use "/src/styles/abstracts/variables" as v;
+
+._Wrapper {
+    padding-top : 48px;
+    ._Container {
+        ._Slider {
+            padding: 62px 0;
+            // display: flex;
+            // // gap: 70px;
+            // align-items: center;
+            // overflow: hidden;
+            // justify-content: center;
+
+            :global {
+                .swiper-slide {
+                    width: 175px !important;
+                    height: 219px;
+                    overflow: hidden;
+                    background: linear-gradient(274deg, v.$primary 0%, v.$secondary 100%);
+                    border-radius: 10px;
+                    position: relative;
+                    filter: blur(2.5px);
+                    // cursor: pointer;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    transition: filter 0.3s ease-in-out;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        background-color: v.$black;
+                        z-index: 0;
+                        inset: 2px;
+                        border-radius: 10px;
+                    }
+
+                    :local {
+                        ._SlideContent {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            position: relative;
+                            z-index: 1;
+                            text-align: center;
+                            padding: 29px;
+                            gap: 40px;
+
+                            h3 {
+                                font-size: 18px;
+                            }
+
+                            ._SlideImage {
+                                width: 95px;
+                                height: 95px;
+                                background: linear-gradient(274deg, v.$primary 0%, v.$secondary 100%);
+                                border-radius: 50%;
+                                overflow: hidden;
+
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+
+                                }
+                            }
+                        }
+                    }
+
+
+
+                    &.swiper-slide-active {
+                        width: 218px !important;
+                        height: 282px;
+                        filter: blur(0);
+                        // cursor: default;
+                        overflow: visible;
+
+                        :local {
+                            ._SlideContent {
+                                gap: 38px;
+
+                                h3 {
+                                    font-size: 24px;
+                                }
+                            
+                                ._SlideImage {
+                                    width: 161px;
+                                    height: 161px;
+                                }
+                            }
+                        }
+                    }
+
+                    svg {
+                        position: absolute;
+                        z-index: 0;
+
+                        &:nth-child(2) {
+                            left: -18px;
+                            top: 56px;
+                        }
+
+                        &:nth-child(3) {
+                            right: -22px;
+                            bottom: 54px;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        ._Border {
+            height: 1px;
+            background-color: rgba($color: v.$primary, $alpha: 0.8);
+            border-radius: 20px;
+            position: relative;
+
+            ._Accent {
+                width: 220px;
+                padding: 2px;
+                background: linear-gradient(274deg, v.$primary 0%, v.$secondary 100%);
+                display: block;
+                position: absolute;
+                left: 0;
+                border-radius: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}

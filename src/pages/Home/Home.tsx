@@ -1,15 +1,20 @@
+import HeroImage from "@/assets/images/hero.webm";
+
 import Navbar from "@/components/organisms/Navbar/Navbar";
-import s from "./Home.module.scss";
 import Button from "@/components/atoms/Button/Button";
 import IcChevronDown from "@/components/atoms/Icons/IcChevronDown";
 import HeroBlobLeft from "@/components/atoms/Svgs/HeroBlobLeft";
 import HeroBlobRight from "@/components/atoms/Svgs/HeroBlobRight";
 import Footer from "@/components/organisms/Footer/Footer";
-import HeroImage from "@/assets/images/hero.webm";
+
 import HomeHowItWorksSection from "./components/HomeHowItWorksSection";
 import HomeSupportedPaymentSection from "./components/HomeSupportedPaymentSection";
 import HomeCompatiblesSection from "./components/HomeCompatiblesSection";
 import HomeHowToGetItSection from "./components/HomeHowToGetItSection";
+import HomeFeaturedInSection from "./components/HomeFeaturedInSection";
+import HomeTestimonialSection from "./components/HomeTestimonialSection";
+
+import s from "./Home.module.scss";
 
 const Home = () => {
   return (
@@ -32,15 +37,11 @@ const Home = () => {
                   </p>
                   <div className={s._Buttons}>
                     <Button>Use HenriPay</Button>
-                    {/* <button>Use HenriPay</button> */}
-                    {/* <button>More information</button> */}
                     <Button className="white" variant="ghost" endicon={<IcChevronDown />}>
                       More information
                     </Button>
                   </div>
                 </div>
-
-                {/* <img src={HeroImage} alt="Henripay" width="642px" height="377px" /> */}
                 <video loop muted autoPlay width={642} height={377}>
                   <source type="video/webm" src={HeroImage} />
                 </video>
@@ -54,6 +55,8 @@ const Home = () => {
         <HomeHowItWorksSection />
         <HomeSupportedPaymentSection />
         <HomeHowToGetItSection />
+        <HomeFeaturedInSection />
+        <HomeTestimonialSection />
         <section className={s._Contact}>
           <h5 className="display-2 white">
             Use HenriPay for your <br />

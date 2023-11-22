@@ -1,47 +1,263 @@
 @use "/src/styles/abstracts/variables" as v;
 
 ._Wrapper {
-    text-align: center;
+    position: relative;
+    overflow: hidden;
 
-    ._Content {
+    ._LeftCircleOut {
+        width: 550px;
+        height: 550px;
+        background-color: v.$primary;
+        filter: blur(250px);
+        display: block;
+        position: absolute;
+        z-index: 0;
+        opacity: 50%;
+        top: 97px;
+        left: -200px;
+    }
 
-        display: flex;
-        // flex-wrap: wrap;
-        gap: 63px;
-        justify-content: center;
-        align-items: center;
-        padding: 62px 0;
+    ._RightCircleOut {
+        width: 550px;
+        height: 550px;
+        background-color: v.$secondary;
+        filter: blur(250px);
+        display: block;
+        position: absolute;
+        z-index: 0;
+        opacity: 35%;
+        top: 182px;
+        right: -200px;
+    }
 
-        // image {
-        //     width: 100%;
-        //     height: 100%;
-        //     object-fit: cover;
-        // }
-        
-        ._Card {
-            padding: 33px;
-            width: 401px;
-            height: 416px;
-            background: rgba($color: v.$white, $alpha: 0.1);
-            border-radius: 23px;
-            flex-shrink: 0;
-            position: relative;
-            overflow: hidden;
+    ._Container {
+        padding: 48px 0;
+        position: relative;
+        z-index: 1;
 
-            ._CardContent {
-                text-align: left;
-                width: 281px;
+        ._HowToGetIt{
+            ._Content {
+                display: flex;
+                gap: 63px;
+                justify-content: center;
+                align-items: center;
+                margin-top: 62px;
+    
+                ._CardWrapper {
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 23px;
+    
+                    ._Card {
+                        padding: 33px;
+                        width: 401px;
+                        height: 416px;
+                        background: rgba($color: v.$black, $alpha: 0.1);
+                        flex-shrink: 0;
+                        position: relative;
+                        z-index: 1;
+    
+                        ._CardContent {
+                            text-align: left;
+                            width: 281px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 16px;
+                        }
+    
+                        ._VrMan {
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                        }
+    
+                        ._HenriPayLogo {
+                            position: absolute;
+                            top: 33px;
+                            right: 33px;
+                        }
+                    }
+    
+                    ._LowerEllipse {
+                        width: 238px;
+                        height: 276px;
+                        position: absolute;
+                        bottom: -172px;
+                        left: -101px;
+                        border-radius: 276px;
+                        background: linear-gradient(227deg, #FC4B2C -0.25%, rgba(255, 182, 14, 0.46) 36.36%, rgba(150, 39, 15, 0.00) 94.93%);
+                        filter: blur(15px);
+                        display: block;
+                        z-index: 0;
+                    }
+    
+                    ._UpperEllipse {
+                        position: absolute;
+                        top: -217px;
+                        right: -71px;
+                        width: 320px;
+                        height: 373px;
+                        border-radius: 373px;
+                        background: linear-gradient(306deg, rgba(252, 75, 44, 0.30) 19.26%, rgba(176, 99, 0, 0.30) 54.65%, rgba(255, 182, 14, 0.14) 78.86%);
+                        filter: blur(10px);
+                        display: block;
+                        z-index: 0;
+                    }
+                }
+            }
+        }
+
+
+        ._Advantages {
+            display: flex;
+            gap: 90px;
+            justify-content: center;
+            align-items: center;
+
+
+            ._TextContent {
+                h4 {
+                    margin-top: 16px;
+                }
+            }
+
+            ._List {
+                list-style: disc;
+                color: v.$white;
+                list-style-position: inside;
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
+                margin-top: 32px;
+            }
+        }
+
+        ._SellUrWeb3 {
+            position: relative;
+
+            ._CardWrapper {
+                position: relative;
+                width: 80%;
+                overflow: hidden;
+                border-radius: 20px;
+
+                ._Card {
+                    padding: 95px 64px;
+                    background-color: rgba($color: v.$black, $alpha: 0.1);
+                    box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.15);
+                    position: relative;
+                    z-index: 1;
+
+                    ._TextContent {
+                        width: 500px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 32px;
+                    }
+                }
+
+                ._LeftCircle {
+                    width: 350px;
+                    height: 350px;
+                    filter: blur(175px);
+                    display: block;
+                    position: absolute;
+                    z-index: 0;
+                    border-radius: 50%;
+                    background: linear-gradient(274deg, v.$primary 0%, v.$secondary 100%);
+                    left: -175px;
+                    bottom: -231px;
+                    top: auto;
+                }
+
+                ._RightCircle {
+                    width: 350px;
+                    height: 350px;
+                    filter: blur(175px);
+                    display: block;
+                    position: absolute;
+                    z-index: 0;
+                    border-radius: 50%;
+                    background: linear-gradient(274deg, v.$primary 0%, v.$secondary 100%);
+                    right: -173px;
+                    top: -231px;
+                }
             }
 
-            ._VrMan {
+            ._Coins {
                 position: absolute;
-                bottom: 0;
                 right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1;
+            }
+        }
+
+        ._MultiChain {
+            ._CardWrapper {
+                background: linear-gradient(274deg, v.$primary 0%, v.$secondary 100%);
+                border-radius: 20px;
+                padding: 2px;
+                position: relative;
+                overflow: hidden;
+
+                ._Card {
+                    z-index: 1;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 48px;
+                    gap: 50px;
+
+                    ._TextContent {
+                        width: 523px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 32px;
+                    }
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    inset: 2px;
+                    background: v.$black;
+                    z-index: 0;
+                    border-radius: 20px;
+                }
+
+                ._LeftCircle {
+                    width: 350px;
+                    height: 350px;
+                    filter: blur(175px);
+                    display: block;
+                    position: absolute;
+                    z-index: 0;
+                    border-radius: 50%;
+                    background: linear-gradient(274deg, v.$primary 0%, v.$secondary 100%);
+                    left: -175px;
+                    bottom: -215px;
+                }
+
+                ._RightCircle {
+                    width: 350px;
+                    height: 350px;
+                    filter: blur(175px);
+                    display: block;
+                    position: absolute;
+                    z-index: 0;
+                    border-radius: 50%;
+                    background: linear-gradient(274deg, v.$primary 0%, v.$secondary 100%);
+                    right: -173px;
+                    top: -231px;
+                }
             }
         }
     }
+
+
+
+
 
 }
