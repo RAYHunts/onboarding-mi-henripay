@@ -10,7 +10,7 @@ import Button from "@/components/atoms/Button/Button";
 
 const HomeHowItWorksSection = () => {
   return (
-    <section className={s._Wrapper}>
+    <section className={s._Wrapper} id="how-it-works">
       <span className={s._LeftCircle}></span>
       <span className={s._RightCircle}></span>
       <div className={clsx(s._Container, "container")}>

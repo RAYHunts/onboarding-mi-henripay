@@ -9,7 +9,7 @@ import multiChain from "@/assets/images/multi-chain.webp";
 
 const HomeHowToGetItSection = () => {
   return (
-    <section className={s._Wrapper}>
+    <section className={s._Wrapper} id="how-to-get-it">
       <span className={s._LeftCircleOut}></span>
       <span className={s._RightCircleOut}></span>
 

@@ -11,10 +11,10 @@ const Navbar = () => {
           <MainLogo />
         </Link>
         <div className={s._Links}>
-          <Link to="/" className="white">How it works</Link>
-          <Link to="/" className="white">How to get it</Link>
-          <Link to="/" className="white">Testimonials</Link>
-          <Link to="/" className="white">HenriPay Ticketing</Link>
+          <a href="./#how-it-works" className="white">How it works</a>
+          <a href="./#how-to-get-it" className="white">How to get it</a>
+          <a href="./#testimonial" className="white">Testimonials</a>
+          <a href="./#" className="white">HenriPay Ticketing</a>
           <Button>Contact Us</Button>
         </div>
       </div>

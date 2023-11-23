@@ -3,7 +3,7 @@ import testimonial1 from "@/assets/images/testimonial1.webp";
 import testimonial2 from "@/assets/images/testimonial2.webp";
 const HomeTestimonialSection = () => {
   return (
-    <section className={s._Wrapper}>
+    <section className={s._Wrapper} id="testimonial">
       <div className={s._Container}>
         <div className="container">
           <div className={s._Content}>
