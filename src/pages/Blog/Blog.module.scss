@@ -1,0 +1,59 @@
+@use "/src/styles/abstracts/mixins" as m;
+@use "/src/styles/abstracts/variables" as v;
+
+._Wrapper {
+    position: relative;
+    padding-top: 100px;
+    overflow: hidden;
+    background-color: v.$black;
+
+    ._HeroBlobLeft {
+        position: absolute;
+        top: 161px;
+        left: -31px;
+        opacity: 0.5;
+        filter: blur(100px);
+        z-index: 0;
+    }
+
+    ._HeroBlobRight {
+        position: absolute;
+        top: -636px;
+        right: -464px;
+        opacity: 0.7;
+        filter: blur(100px);
+        z-index: 0;
+    }
+
+    ._LeftCircle {
+        position: absolute;
+        border-radius: 550px;
+        opacity: 0.5;
+        background: v.$primary;
+        width: 550px;
+        height: 550px;
+        left: -300px;
+        top: 1324px;
+        filter: blur(250px);
+        z-index: 0;
+    }
+
+    ._RightCircle {
+        position: absolute;
+        border-radius: 550px;
+        opacity: 0.35;
+        background: v.$secondary;
+        width: 550px;
+        height: 550px;
+        right: -275px;
+        top: 1409px;
+        filter: blur(250px);
+        z-index: 0;
+    }
+
+    ._Container {
+        min-height: 800px;
+        position: relative;
+        z-index: 1;
+    }
+}

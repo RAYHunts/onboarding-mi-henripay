@@ -1,0 +1,7 @@
+._Container {
+    column-gap: 30px;
+    row-gap: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, calc(100% / 3 - 30px));
+    padding: 96px 0;
+}

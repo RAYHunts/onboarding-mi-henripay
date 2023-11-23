@@ -20,8 +20,8 @@
 	}
 }
 
-// @mixin animation($name) {
-// 	@keyframes #{$name} {
-// 		@content;
-// 	}
-// }
+@mixin animation($name) {
+	@keyframes #{$name} {
+		@content;
+	}
+}

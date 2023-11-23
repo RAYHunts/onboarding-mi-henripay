@@ -7,15 +7,10 @@ const Navbar = () => {
   return (
     <nav className={s._Wrapper}>
       <div className={s._Container}>
-        <div className={s._Logo}>
+        <Link to="/" className={s._Logo}>
           <MainLogo />
-        </div>
+        </Link>
         <div className={s._Links}>
-          {/* How it works
-        How to get it
-        Testimonials
-        HenriPay Ticketing
-        Contact Us */}
           <Link to="/" className="white">How it works</Link>
           <Link to="/" className="white">How to get it</Link>
           <Link to="/" className="white">Testimonials</Link>
