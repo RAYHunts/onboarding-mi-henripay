@@ -29,7 +29,7 @@ const App = () => {
     <AuthContext.Provider
       value={isAuthenticated}
     >
-      <RouterProvider router={router} />;
+      <RouterProvider router={router} />
     </AuthContext.Provider>
   );
 };
