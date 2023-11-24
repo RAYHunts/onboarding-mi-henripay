@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import s from "./Navbar.module.scss";
 import MainLogo from "@/components/atoms/Svgs/MainLogo";
 import Button from "@/components/atoms/Button/Button";
+import { useAuthentication } from "../../../hooks/useAuthentication";
 
 const Navbar = () => {
+  const { isAuthenticated } = useAuthentication();
   return (
     <nav className={s._Wrapper}>
       <div className={s._Container}>
@@ -14,7 +16,8 @@ const Navbar = () => {
           <a href="./#how-it-works" className="white">How it works</a>
           <a href="./#how-to-get-it" className="white">How to get it</a>
           <a href="./#testimonial" className="white">Testimonials</a>
-          <a href="./#" className="white">HenriPay Ticketing</a>
+          {isAuthenticated && <Link to="/logout" className="white">Logout</Link>}
+          {!isAuthenticated && <Link to="/login" className="white">Login</Link>}
           <Button>Contact Us</Button>
         </div>
       </div>

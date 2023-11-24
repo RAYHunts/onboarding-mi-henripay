@@ -25,3 +25,17 @@
 .text-justify {
     text-align: justify;
 }
+
+input,
+textarea,
+.select {
+    border: none;
+    outline: none;
+    background: v.$white;
+    border-radius: 20px;
+    padding: 12px;
+
+    &:focus {
+        outline: none;
+    }
+}

@@ -2,11 +2,11 @@
 @use "/src/styles/abstracts/variables" as v;
 
 ._Wrapper {
-
+    overflow: hidden;
     ._Section {
         padding: 48px 0;
         position: relative;
-        overflow: hidden;
+        // overflow: hidden;
 
         &::after {
             content: "";

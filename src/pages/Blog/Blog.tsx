@@ -1,15 +1,17 @@
-import Footer from "@/components/organisms/Footer/Footer";
-import Navbar from "@/components/organisms/Navbar/Navbar";
-import s from "./Blog.module.scss";
-import BlogHeader from "./BlogHeader";
 import HeroBlobLeft from "@/components/atoms/Svgs/HeroBlobLeft";
 import HeroBlobRight from "@/components/atoms/Svgs/HeroBlobRight";
-import BlogContents from "./BlogContents";
-
+import Footer from "@/components/organisms/Footer/Footer";
+import Navbar from "@/components/organisms/Navbar/Navbar";
 import { Navigate } from "react-router-dom";
+import s from "./Blog.module.scss";
+import BlogContents from "./BlogContents";
+import BlogHeader from "./BlogHeader";
+
 import { useAuthentication } from "../../hooks/useAuthentication";
 const Blog = () => {
   const {isAuthenticated} = useAuthentication();
+  console.log(isAuthenticated);
+  
   if(!isAuthenticated) {
     return <Navigate to="/" />;
   }

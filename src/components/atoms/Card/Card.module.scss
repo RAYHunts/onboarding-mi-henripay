@@ -1,0 +1,21 @@
+@use "/src/styles/abstracts/variables" as v;
+
+._Wrapper {
+    position: relative;
+    border-radius: 50px;
+
+    &.gradient {
+        background: linear-gradient(274deg, v.$primary 0%, v.$secondary 100%); 
+        padding: 2px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 2px;
+            background: v.$black;
+            border-radius: 50px;
+            z-index: 0;
+        }
+    }
+
+}

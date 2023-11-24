@@ -1,0 +1,32 @@
+._Wrapper {
+    position: relative;
+
+    &:has(span._StartIcon) {
+        input {
+            padding-left: 40px;
+        }
+    }
+
+    &:has(span._EndIcon) {
+        input {
+            padding-right: 40px;
+        }
+    }
+
+    label {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        color: v.$gray-800;
+        margin-bottom: 6px;
+
+        &._Required {
+            &::after {
+                content: "*";
+                color: v.$danger-600;
+                margin-left: 2px;
+            }
+        }
+    }
+
+}
