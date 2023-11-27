@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import s from "./ModalCookies.module.scss";
-import { useRef, MouseEvent, useEffect, useContext } from "react";
+import { useRef, MouseEvent, useContext } from "react";
 import { ModalCookiesContext } from "../../../contexts/modalCookiesContext";
 import Card from "@/components/atoms/Card/Card";
 
