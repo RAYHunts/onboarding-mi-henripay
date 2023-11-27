@@ -5,6 +5,7 @@ import { AuthContext, useAuthentication } from "./hooks/useAuthentication";
 import Login from "./pages/login";
 import Logout from "./pages/logout";
 import { ModalContactProvider } from "./contexts/modalContactContext";
+import { ModalCookiesProvider } from "./contexts/modalCookiesContext";
 
 const router = createBrowserRouter([
   {
@@ -29,9 +30,11 @@ const App = () => {
   const { isAuthenticated } = useAuthentication();
   return (
     <AuthContext.Provider value={isAuthenticated}>
-      <ModalContactProvider>
-        <RouterProvider router={router} />
-      </ModalContactProvider>
+      <ModalCookiesProvider>
+        <ModalContactProvider>
+          <RouterProvider router={router} />
+        </ModalContactProvider>
+      </ModalCookiesProvider>
     </AuthContext.Provider>
   );
 };

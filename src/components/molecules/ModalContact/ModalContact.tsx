@@ -37,7 +37,7 @@ const ModalContact = () => {
         <Card className={s._SuccessContainer} variant="gradient">
           <div className={s._Content}>
             <IcCheckRing />
-            <h1 className={s._Heading}>Your subscribtion is successful</h1>
+            <h1 className={s._Heading}>sent successfully</h1>
           </div>
         </Card>
       )}
