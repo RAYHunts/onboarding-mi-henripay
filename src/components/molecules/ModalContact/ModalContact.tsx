@@ -7,6 +7,7 @@ import MainLogo from "@/components/atoms/Svgs/MainLogo";
 import Input from "@/components/atoms/Input/Input";
 import Select from "@/components/atoms/Select/Select";
 import Textarea from "@/components/atoms/Textarea/Textarea";
+import IcCLoseRing from "@/components/atoms/Icons/IcCloseRing";
 
 const ModalContact = () => {
   const { closeModal, isOpen } = useContext(ModalContactContext);
@@ -28,6 +29,9 @@ const ModalContact = () => {
   return (
     <div className={clsx(s._Wrapper, isOpen && s._Open)} onClick={(e) => handleClickOutside(e)}>
       <Card className={s._Container} ref={modalRef} variant="gradient">
+        <button className={s._CloseButton} onClick={closeModal}>
+          <IcCLoseRing />
+        </button>
         <div className={s._Content}>
           <MainLogo width={282} />
           <h1 className={s._Heading}>

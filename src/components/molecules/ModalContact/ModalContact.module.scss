@@ -25,6 +25,16 @@
         border-radius: 20px;
         overflow: hidden;
 
+        ._CloseButton {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            z-index: 2;
+            width: max-content;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
         ._Content {
             padding: 44px 45px;
             color: v.$white;
