@@ -75,4 +75,35 @@
             top: 0;
         }
     }
+
+    ._SuccessContainer {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 573px;
+        height: 265px;
+        border-radius: 20px;
+        overflow: hidden;
+
+        ._Content {
+            z-index: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 44px 45px;
+            justify-content: center;
+            align-items: center;
+
+            ._Heading {
+                font-size: 24px;
+                font-weight: 600;
+                text-transform: capitalize;
+                color: v.$white;
+            }
+        }
+
+
+    }
 }
