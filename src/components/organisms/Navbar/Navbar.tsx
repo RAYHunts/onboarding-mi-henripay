@@ -1,11 +1,14 @@
-import { Link } from "react-router-dom";
-import s from "./Navbar.module.scss";
-import MainLogo from "@/components/atoms/Svgs/MainLogo";
 import Button from "@/components/atoms/Button/Button";
+import MainLogo from "@/components/atoms/Svgs/MainLogo";
+import { Link } from "react-router-dom";
 import { useAuthentication } from "../../../hooks/useAuthentication";
+import { useContext } from "react";
+import s from "./Navbar.module.scss";
+import { ModalContactContext } from "../../../contexts/modalContactContext";
 
 const Navbar = () => {
   const { isAuthenticated } = useAuthentication();
+  const {  openModal } = useContext(ModalContactContext);
   return (
     <nav className={s._Wrapper}>
       <div className={s._Container}>
@@ -18,7 +21,7 @@ const Navbar = () => {
           <a href="./#testimonial" className="white">Testimonials</a>
           {isAuthenticated && <Link to="/logout" className="white">Logout</Link>}
           {!isAuthenticated && <Link to="/login" className="white">Login</Link>}
-          <Button>Contact Us</Button>
+          <Button onClick={() => openModal()}>Contact Us</Button>
         </div>
       </div>
     </nav>

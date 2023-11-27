@@ -10,7 +10,6 @@ import BlogHeader from "./BlogHeader";
 import { useAuthentication } from "../../hooks/useAuthentication";
 const Blog = () => {
   const {isAuthenticated} = useAuthentication();
-  console.log(isAuthenticated);
   
   if(!isAuthenticated) {
     return <Navigate to="/" />;

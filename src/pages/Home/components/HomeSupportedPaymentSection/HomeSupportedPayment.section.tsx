@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import clsx from "clsx";
 import s from "./HomeSupportedPayment.module.scss";
 import supportImage from "@/assets/images/supported-payment.webp";
@@ -15,8 +16,10 @@ import SolanaLogo from "@/assets/images/logo/solana.svg";
 import WechatLogo from "@/assets/images/logo/wechat.svg";
 import GiropayLogo from "@/assets/images/logo/giropay.svg";
 import BancontactLogo from "@/assets/images/logo/bancontact.svg";
+import { ModalContactContext } from "../../../../contexts/modalContactContext";
 
 const HomeSupportedPaymentSection = () => {
+  const { openModal } = useContext(ModalContactContext);
   return (
     <section className={s._Wrapper}>
       <h3 className="display-2 white">
@@ -71,7 +74,7 @@ const HomeSupportedPaymentSection = () => {
             </div>
             <img src={supportImage} alt="Henripay" width="460px" height="306px" className={s._Image} />
           </div>
-          <Button className={s._Button}>Integrate HenriPay</Button>
+          <Button className={s._Button} onClick={openModal}>Integrate HenriPay</Button>
         </div>
         <span className={clsx(s._Circle, s._Right)}></span>
         <span className={clsx(s._Circle, s._Left)}></span>

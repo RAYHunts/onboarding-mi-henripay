@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import Button from "@/components/atoms/Button/Button";
 import s from "./HomeHowToGetItSection.module.scss";
 import howToGet from "@/assets/images/how-to-get.webp";
@@ -6,8 +7,10 @@ import henripayLogo from "@/assets/images/logo/henripay.svg";
 import advantages from "@/assets/images/advantages.webp";
 import coins from "@/assets/images/coins.webp";
 import multiChain from "@/assets/images/multi-chain.webp";
+import { ModalContactContext } from "../../../../contexts/modalContactContext";
 
 const HomeHowToGetItSection = () => {
+  const { openModal } = useContext(ModalContactContext);
   return (
     <section className={s._Wrapper} id="how-to-get-it">
       <span className={s._LeftCircleOut}></span>
@@ -29,7 +32,7 @@ const HomeHowToGetItSection = () => {
                   <div className={s._CardContent}>
                     <h4 className="h1 white">Buy NFTs or Crypto simple and with the payment method YOU are most comfortable with</h4>
                     <p className="white">Contact us now!</p>
-                    <Button>Contact Us</Button>
+                    <Button onClick={openModal}>Contact Us</Button>
                   </div>
                   <img src={vrMan} alt="vr-man" width="335px" height="274px" className={s._VrMan} />
                   <img src={henripayLogo} alt="HenriPay" width="66px" height="60px" className={s._HenriPayLogo} />

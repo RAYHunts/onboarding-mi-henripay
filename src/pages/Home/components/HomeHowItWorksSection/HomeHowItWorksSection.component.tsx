@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import clsx from "clsx";
 import Maze from "@/components/atoms/Svgs/Maze";
 import s from "./HomeHowItWorks.module.scss";
@@ -6,9 +7,11 @@ import MazeSigns from "@/components/atoms/Svgs/MazeSigns";
 import IcVersus from "@/components/atoms/Icons/IcVersus";
 import WithHenriPay from "@/components/atoms/Svgs/WithHenriPay";
 import Button from "@/components/atoms/Button/Button";
+import { ModalContactContext } from "../../../../contexts/modalContactContext";
 
 
 const HomeHowItWorksSection = () => {
+  const { openModal } = useContext(ModalContactContext);
   return (
     <section className={s._Wrapper} id="how-it-works">
       <span className={s._LeftCircle}></span>
@@ -48,7 +51,7 @@ const HomeHowItWorksSection = () => {
             Tap into the 99% of your potential customers <br />
             that you are currently missing out on.
           </h2>
-          <Button>Integrate HenriPay</Button>
+          <Button onClick={openModal}>Integrate HenriPay</Button>
         </div>
       </div>
     </section>

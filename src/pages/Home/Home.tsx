@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import HeroImage from "@/assets/images/hero.webm";
 
 import Navbar from "@/components/organisms/Navbar/Navbar";
@@ -15,8 +16,10 @@ import HomeFeaturedInSection from "./components/HomeFeaturedInSection";
 import HomeTestimonialSection from "./components/HomeTestimonialSection";
 
 import s from "./Home.module.scss";
+import { ModalContactContext } from "../../contexts/modalContactContext";
 
 const Home = () => {
+  const { openModal } = useContext(ModalContactContext);
   return (
     <div className="bg-black">
       <Navbar />
@@ -36,7 +39,7 @@ const Home = () => {
                     Imagine how your market potential just multiplied!
                   </p>
                   <div className={s._Buttons}>
-                    <Button>Use HenriPay</Button>
+                    <Button onClick={openModal}>Use HenriPay</Button>
                     <Button className="white" variant="ghost" endicon={<IcChevronDown />}>
                       More information
                     </Button>
@@ -62,7 +65,7 @@ const Home = () => {
             Use HenriPay for your <br />
             business.
           </h5>
-          <Button>Contact Us</Button>
+          <Button onClick={openModal}>Contact Us</Button>
         </section>
       </main>
       <Footer />

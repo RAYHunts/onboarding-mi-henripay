@@ -1,29 +1,68 @@
+@use "/src/styles/abstracts/variables" as v;
+
 ._Wrapper {
     position: relative;
+    user-select: none;
 
     ._Select {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+
+        ._Icon {
+            color: v.$gray;
+            transition: all 0.3s ease-in-out;
+
+            &._Open {
+                transform: rotate(180deg);
+            }
+        }
     }
 
-    ._Options {
+    label {
+        display: block;
+        font-size: 15px;
+        font-weight: 400;
+        color: v.$white;
+        margin-bottom: 8px;
+
+        &._Required {
+            &::after {
+                content: "*";
+                color: v.$primary;
+                margin-left: 2px;
+            }
+        }
+    }
+
+    ._OptionsContainer {
         position: absolute;
         top: 100%;
         left: 0;
-        width: 100%;
-        background: #fff;
+        background: v.$white;
         border-radius: 20px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        padding: 12px;
         display: none;
         z-index: 1;
+        width: 100%;
 
         &._Open {
             display: block;
         }
 
-        ._Option {
-            cursor: pointer;
+        ._Options {
+            padding: 12px;
+            max-height: 200px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            ._Option {
+                cursor: pointer;
+                color: v.$gray;
+            }
         }
+
     }
 }

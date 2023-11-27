@@ -2,6 +2,16 @@ const MainLogo = ({ width = 203 }) => {
   const height = width * 0.2079;
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 203 42" fill="none">
+      <defs>
+        <linearGradient id="paint0_linear_4452_515" x1="45.9235" y1="41.7486" x2="1.80951" y2="38.8907" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#FC4B2C" />
+          <stop offset={1} stopColor="#FFB60E" />
+        </linearGradient>
+        <linearGradient id="paint1_linear_4452_515" x1="14.612" y1="18.7868" x2="-0.884623" y2="17.7792" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#F3834C" />
+          <stop offset={1} stopColor="#FBA752" />
+        </linearGradient>
+      </defs>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -38,16 +48,7 @@ const MainLogo = ({ width = 203 }) => {
         d="M202.508 16.722C200.586 23.7951 198.354 30.2036 195.815 35.9475C195.34 37.0156 194.853 37.9294 194.355 38.689C193.857 39.4485 193.299 40.0775 192.682 40.5759C192.065 41.0743 191.376 41.4304 190.617 41.644C189.857 41.8813 188.979 42 187.982 42C187.318 42 186.653 41.9288 185.988 41.7864C185.348 41.644 184.861 41.4897 184.529 41.3236L185.312 37.8701C186.166 38.2024 187.009 38.3685 187.84 38.3685C188.955 38.3685 189.822 38.0956 190.439 37.5497C191.08 37.0275 191.637 36.2086 192.112 35.0931C190.759 32.4822 189.454 29.634 188.196 26.5484C186.962 23.4628 185.858 20.1874 184.885 16.722H189.477C189.715 17.7189 190 18.7989 190.332 19.9619C190.688 21.1249 191.068 22.3117 191.471 23.5222C191.875 24.7089 192.302 25.8957 192.753 27.0825C193.204 28.2692 193.655 29.3729 194.106 30.3935C194.865 28.2811 195.577 26.0381 196.242 23.6646C196.907 21.2673 197.512 18.9532 198.058 16.722H202.508Z"
         fill="white"
       />
-      <defs>
-        <linearGradient id="paint0_linear_4452_515" x1="45.9235" y1="41.7486" x2="1.80951" y2="38.8907" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#FC4B2C" />
-          <stop offset={1} stopColor="#FFB60E" />
-        </linearGradient>
-        <linearGradient id="paint1_linear_4452_515" x1="14.612" y1="18.7868" x2="-0.884623" y2="17.7792" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#F3834C" />
-          <stop offset={1} stopColor="#FBA752" />
-        </linearGradient>
-      </defs>
+      
     </svg>
   );
 };

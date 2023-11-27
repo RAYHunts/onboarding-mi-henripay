@@ -1,74 +1,25 @@
+import ModalContact from "@/components/molecules/ModalContact/ModalContact";
+import { createContext, ReactNode, useState } from "react";
 
-
-type ModalContactContext = {
-    element: ReactNode 
+type ModalContactContextData = {
     isOpen: boolean;
-    trigger?: ReactNode;
+    openModal: () => void;
+    closeModal: () => void;
 };
 
-const modalContactContext = createContext<ModalContactContext>({
-    element: null,
-    isOpen: false,
-    trigger: null,
-});
-
-const useModalContact = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [element, setElement] = useState<ReactNode>(null);
-    const [trigger, setTrigger] = useState<ReactNode>(null);
-
-    const openModal = (element: ReactNode, trigger?: ReactNode) => {
-        setIsOpen(true);
-        setElement(element);
-        setTrigger(trigger);
-    };
-
-    const closeModal = () => { 
-        setIsOpen(false);
-        setElement(null);
-        setTrigger(null);
-    };
-
-    useEffect(() => {
-        const handleEscape = (e: KeyboardEvent) => {
-            if (e.key === "Escape") {
-                closeModal();
-            }
-        };
-
-        if (isOpen) {
-            document.addEventListener("keydown", handleEscape);
-        }
-
-        return () => {
-            document.removeEventListener("keydown", handleEscape);
-        };
-    }, [isOpen]);
-
-    return {
-        isOpen,
-        openModal,
-        closeModal,
-        element,
-        trigger,
-    };
-
-}
+const ModalContactContext = createContext<ModalContactContextData>({} as ModalContactContextData);
 
 const ModalContactProvider = ({ children }: { children: ReactNode }) => {
-    const { isOpen, element, trigger } = useModalContact();
+    const [isOpen, setIsOpen] = useState(false);
+    const openModal = () => setIsOpen(true);
+    const closeModal = () => setIsOpen(false);
 
     return (
-        <modalContactContext.Provider
-            value={{
-                isOpen,
-                openModal,
-                closeModal,
-                element,
-                trigger,
-            }}
-        >
+        <ModalContactContext.Provider value={{ isOpen, openModal, closeModal }}>
             {children}
-        </modalContactContext.Provider>
+            <ModalContact />
+        </ModalContactContext.Provider>
     );
-};
+}
+
+export { ModalContactContext, ModalContactProvider };

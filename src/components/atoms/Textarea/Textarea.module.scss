@@ -1,18 +1,7 @@
 @use "/src/styles/abstracts/variables" as v;
+
 ._Wrapper {
     position: relative;
-
-    &:has(span._StartIcon) {
-        input {
-            padding-left: 40px;
-        }
-    }
-
-    &:has(span._EndIcon) {
-        input {
-            padding-right: 40px;
-        }
-    }
 
     label {
         display: block;

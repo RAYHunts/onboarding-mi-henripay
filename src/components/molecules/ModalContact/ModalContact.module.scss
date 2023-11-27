@@ -1,0 +1,68 @@
+@use "/src/styles/abstracts/variables" as v;
+
+._Wrapper {
+    // backdrop
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: v.$black, $alpha: 0.5);
+    display: none;
+
+    &._Open {
+        display: block;
+    }
+
+    ._Container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 629px;
+        height: 784px;
+        border-radius: 20px;
+        overflow: hidden;
+
+        ._Content {
+            padding: 44px 45px;
+            color: v.$white;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            ._Heading {
+                font-size: 36px;
+                font-weight: 600;
+                line-height: normal;
+                text-transform: capitalize;
+            }
+
+
+            ._Form {
+                display: grid;
+                row-gap: 30px;
+                column-gap: 22px;
+                grid-template-columns: repeat(2, calc(50% - 11px));
+
+                ._Textarea {
+                    grid-column: 1 / -1;
+                }
+            }
+        }
+
+        ._TopLeftCircle {
+            position: absolute;
+            width: 421px;
+            height: 421px;
+            background-color: v.$primary;
+            filter: blur(250px);
+            border-radius: 50%;
+            left: -211px;
+            top: 0;
+        }
+    }
+}
