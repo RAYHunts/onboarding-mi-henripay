@@ -60,6 +60,10 @@
                 flex-direction: column;
                 gap: 36px;
 
+                @include m.mobile {
+                    padding: 24px 40px;
+                }
+
                 ._Logo {
                     // grid-column: span 3;
                     place-self: center;
@@ -75,11 +79,22 @@
                     display: flex;
                     justify-content: space-between;
 
+                    @include m.mobile {
+                        flex-direction: column;
+                        gap: 20px;
+                    }
 
                     ._Links {
                         align-self: flex-end;
                         display: flex;
                         gap: 20px;
+
+                        @include m.mobile {
+                            // order: 2;
+                            gap: 10px;
+                            flex-direction: column;
+                            align-self: flex-start;
+                        }
                     }
 
                     ._Socials {

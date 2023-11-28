@@ -1,15 +1,11 @@
 @use "/src/styles/abstracts/variables" as v;
+@use "/src/styles/abstracts/mixins" as m;
 
 ._Wrapper {
     padding-top : 48px;
     ._Container {
         ._Slider {
             padding: 62px 0;
-            // display: flex;
-            // // gap: 70px;
-            // align-items: center;
-            // overflow: hidden;
-            // justify-content: center;
 
             :global {
                 .swiper-slide {
@@ -20,10 +16,14 @@
                     border-radius: 10px;
                     position: relative;
                     filter: blur(2.5px);
-                    // cursor: pointer;
                     margin-top: auto;
                     margin-bottom: auto;
                     transition: filter 0.3s ease-in-out;
+
+                    // @include m.mobile {
+                    //     width: 218px !important;
+                    //     height: 282px;
+                    // }
 
                     &::before {
                         content: "";

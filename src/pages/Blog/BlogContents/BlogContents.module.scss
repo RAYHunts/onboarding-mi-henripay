@@ -1,7 +1,21 @@
+@use "/src/styles/abstracts/variables" as v;
+@use "/src/styles/abstracts/mixins" as m;
+
 ._Container {
     column-gap: 30px;
     row-gap: 60px;
     display: grid;
     grid-template-columns: repeat(3, calc(100% / 3 - 30px));
     padding: 96px 0;
+
+    @include m.tablet {
+        grid-template-columns: repeat(2, calc(100% / 2 - 30px));
+        justify-content: center;
+        place-items: center;
+    }
+
+    @include m.mobile {
+        grid-template-columns: repeat(1, 100%);
+        padding: 60px 0;
+    }
 }

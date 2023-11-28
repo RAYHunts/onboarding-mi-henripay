@@ -1,9 +1,14 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 @mixin display-1 {
     line-height: 1.5;
     font-size: 56px;
     font-weight: 600;
+
+    @include m.mobile() {
+        font-size: 28px;
+    }
 }
 
 @mixin display-2 {
@@ -12,6 +17,10 @@
     font-weight: 600;
     line-height: 1.5;
     text-transform: capitalize;
+
+    @include m.mobile() {
+        font-size: 24px;
+    }
 }
 
 @mixin heading-1 {
@@ -61,6 +70,10 @@
     line-height: 1.6;
     font-size: 20px;
     font-weight: 400;
+
+    @include m.mobile() {
+        font-size: 12px;
+    }
 }
 
 @mixin subheading-2 {

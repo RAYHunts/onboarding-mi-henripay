@@ -1,4 +1,5 @@
 @use "/src/styles/abstracts/variables" as v;
+@use "/src/styles/abstracts/mixins" as m;
 
 ._Wrapper {
     position: relative;
@@ -35,28 +36,37 @@
         position: relative;
         z-index: 1;
 
-        ._HowToGetIt{
+        @include m.mobile {
+            padding: 24px 0;
+        }
+
+        ._HowToGetIt {
             ._Content {
                 display: flex;
                 gap: 63px;
                 justify-content: center;
                 align-items: center;
                 margin-top: 62px;
-    
+
+                @include m.mobile {
+                    flex-direction: column;
+                    gap: 32px;
+                }
+
                 ._CardWrapper {
                     position: relative;
                     overflow: hidden;
                     border-radius: 23px;
-    
+                    flex-shrink: 0;
+
                     ._Card {
                         padding: 33px;
                         width: 401px;
                         height: 416px;
                         background: rgba($color: v.$black, $alpha: 0.1);
-                        flex-shrink: 0;
                         position: relative;
                         z-index: 1;
-    
+
                         ._CardContent {
                             text-align: left;
                             width: 281px;
@@ -64,20 +74,20 @@
                             flex-direction: column;
                             gap: 16px;
                         }
-    
+
                         ._VrMan {
                             position: absolute;
                             bottom: 0;
                             right: 0;
                         }
-    
+
                         ._HenriPayLogo {
                             position: absolute;
                             top: 33px;
                             right: 33px;
                         }
                     }
-    
+
                     ._LowerEllipse {
                         width: 238px;
                         height: 276px;
@@ -90,7 +100,7 @@
                         display: block;
                         z-index: 0;
                     }
-    
+
                     ._UpperEllipse {
                         position: absolute;
                         top: -217px;
@@ -114,6 +124,19 @@
             justify-content: center;
             align-items: center;
 
+            @include m.mobile {
+                flex-direction: column;
+
+                ._AdvantagesImage {
+                    width: 100%;
+                    height: 100%;
+                    order: 2;
+                }
+            }
+
+            ._AdvantagesImage {
+                object-fit: cover;
+            }
 
             ._TextContent {
                 h4 {
@@ -135,25 +158,18 @@
         ._SellUrWeb3 {
             position: relative;
 
-            ._CardWrapper {
-                position: relative;
+            ._Card {
                 width: 80%;
+                background-color: rgba($color: v.$black, $alpha: 0.1);
+                box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.15);
+                position: absolute;
+                z-index: -1;
+                height: 100%;
                 overflow: hidden;
                 border-radius: 20px;
 
-                ._Card {
-                    padding: 95px 64px;
-                    background-color: rgba($color: v.$black, $alpha: 0.1);
-                    box-shadow: 7px 7px 15px 0px rgba(0, 0, 0, 0.15);
-                    position: relative;
-                    z-index: 1;
-
-                    ._TextContent {
-                        width: 500px;
-                        display: flex;
-                        flex-direction: column;
-                        gap: 32px;
-                    }
+                @include m.tablet {
+                    width: 100%;
                 }
 
                 ._LeftCircle {
@@ -168,6 +184,13 @@
                     left: -175px;
                     bottom: -231px;
                     top: auto;
+
+                    @include m.mobile {
+                        width: 150px;
+                        height: 150px;
+                        left: -75px;
+                        bottom: -75px;
+                    }
                 }
 
                 ._RightCircle {
@@ -181,16 +204,52 @@
                     background: linear-gradient(274deg, v.$primary 0%, v.$secondary 100%);
                     right: -173px;
                     top: -231px;
+
+                    @include m.mobile {
+                        width: 150px;
+                        height: 150px;
+                        right: -75px;
+                        top: -75px;
+                    }
+                }
+
+            }
+
+            ._Content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 95px 64px;
+                padding-right: 0;
+
+                @include m.tablet {
+                    flex-direction: column;
+                    gap: 16px;
+                    padding: 24px;
+                }
+                ._TextContent {
+                    width: 500px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 32px;
+
+                    @include m.tablet {
+                        width: 100%;
+                        order: 2;
+                        gap: 16px;
+                    }
+                }
+
+                ._Coins{
+                    @include m.tablet {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        order: 1;
+                    }
                 }
             }
 
-            ._Coins {
-                position: absolute;
-                right: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                z-index: 1;
-            }
         }
 
         ._MultiChain {
@@ -201,6 +260,8 @@
                 position: relative;
                 overflow: hidden;
 
+
+
                 ._Card {
                     z-index: 1;
                     position: relative;
@@ -210,11 +271,30 @@
                     padding: 48px;
                     gap: 50px;
 
+                    @include m.mobile {
+                        flex-direction: column;
+                        padding: 24px;
+                    }
+
                     ._TextContent {
                         width: 523px;
                         display: flex;
                         flex-direction: column;
                         gap: 32px;
+
+                        @include m.mobile {
+                            width: 100%;
+                            gap: 16px;
+                        }
+                    }
+
+                    ._MultiChainImage {
+                        object-fit: cover;
+
+                        @include m.mobile {
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
                 }
 

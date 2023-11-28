@@ -1,4 +1,5 @@
 @use "/src/styles/abstracts/mixins" as m;
+@use "/src/styles/abstracts/variables" as v;
 
 ._Wrapper {
     position: fixed;
@@ -14,13 +15,58 @@
         justify-content: space-between;
         align-items: center;
         border-radius: 50px;
-        background: rgba(30, 30, 44, 0.50);
-        backdrop-filter: blur(5px);
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: rgba(v.$black, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: -1;
+            inset: 0;
+            border-radius: 50px;
+        }
+
+        @include m.mobile {
+            padding: 10px 24px;
+        }
 
         ._Links {
             display: flex;
             gap: 38px;
             align-items: center;
+
+            @include m.mobile {
+                position: absolute;
+                height: 100vh;
+                flex-direction: column;
+                align-items: flex-start;
+                top: 70px;
+                padding: 24px;
+                right: -16px;
+                transform: translateX(100%);
+                background-color: rgba(v.$black, 0.5);
+                backdrop-filter: blur(5px);
+                z-index: 1;
+                border-radius: 10px;
+                transition: transform 0.3s ease-in-out;
+
+                &._Open {
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        ._Hamburger {
+            display: none;
+            background-color: transparent;
+            height: max-content;
+            cursor: pointer;
+            color: v.$white;
+
+            @include m.mobile {
+                display: block;
+            }
         }
     }
 }

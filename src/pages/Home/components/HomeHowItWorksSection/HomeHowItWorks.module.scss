@@ -58,9 +58,11 @@
             ._WithoutHenriPay {
                 ._Maze {
                     display: grid;
+                    width: 100%;
+                    object-fit: contain;
                     grid-template-areas: stack;
 
-                    >svg {
+                    > svg {
                         grid-area: stack;
                         position: relative;
                     }
