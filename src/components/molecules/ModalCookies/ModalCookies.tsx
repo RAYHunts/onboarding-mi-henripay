@@ -5,6 +5,7 @@ import { ModalCookiesContext } from "../../../contexts/modalCookiesContext";
 import Card from "@/components/atoms/Card/Card";
 import IcCookies from "@/components/atoms/Icons/IcCookies";
 import Button from "@/components/atoms/Button/Button";
+import IcCLoseRing from "@/components/atoms/Icons/IcCloseRing";
 
 const ModalCookies = () => {
   const { closeModal, isOpen } = useContext(ModalCookiesContext);
@@ -23,6 +24,9 @@ const ModalCookies = () => {
   return (
     <div className={clsx(s._Wrapper, isOpen && s._Open)} onClick={(e) => handleClickOutside(e)}>
       <Card className={s._Container} ref={modalRef} variant="gradient">
+        <button className={s._CloseButton} onClick={closeModal}>
+          <IcCLoseRing />
+        </button>
         <div className={s._Content}>
           <IcCookies />
           <h1 className={s._Heading}>COOKIES!</h1>
