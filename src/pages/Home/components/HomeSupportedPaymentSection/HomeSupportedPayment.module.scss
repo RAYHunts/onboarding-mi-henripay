@@ -4,9 +4,11 @@
 ._Wrapper {
     padding: 50px 0;
     text-align: center;
+
     h3 {
         margin-bottom: 32px;
     }
+
     ._Container {
         position: relative;
         overflow: hidden;
@@ -30,16 +32,23 @@
                 padding-top: 71px;
                 padding-bottom: 35px;
 
+                @include m.tablet {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 24px;
+                    padding: 24px 0;
+                }
+
                 ._Image {
                     border-radius: 20px;
                     box-shadow: 0px 0px 0px 1px #C4704C;
 
-                    @include m.mobile {
-                        width: 200px;
-                        // width="460px" height="306px"
+                    @include m.tablet {
+                        width: 100%;
                         aspect-ratio: 460/306;
                         object-fit: contain;
-                        height: calc(200px * 306 / 460);
+                        height: calc(100% * 306 / 460);
+                        order: 2;
                     }
                 }
 
@@ -51,12 +60,21 @@
                     gap: 25px;
                     position: absolute;
 
+                    @include m.tablet {
+                        position: static;
+                        gap: 16px;
+                    }
+
                     ._PaymentWrapper {
                         display: flex;
                         justify-content: center;
                         gap: 25px;
                         width: calc(128px * 2 + 25px);
                         flex-wrap: wrap;
+
+                        @include m.tablet {
+                            gap: 16px;
+                        }
 
                         ._Payment {
                             background-color: v.$white;
@@ -74,11 +92,29 @@
                 ._LeftPayment {
                     left: -245px;
                     top: 20px;
+
+                    @include m.tablet {
+                        align-self: flex-start;
+                        order: 1;
+
+                        ._PaymentWrapper {
+                            justify-content: flex-start;
+                        }
+                    }
                 }
 
                 ._RightPayment {
                     right: -245px;
                     top: 20px;
+
+                    @include m.tablet {
+                        align-self: flex-end;
+                        order: 3;
+
+                        ._PaymentWrapper {
+                            justify-content: flex-end;
+                        }
+                    }
                 }
             }
         }
