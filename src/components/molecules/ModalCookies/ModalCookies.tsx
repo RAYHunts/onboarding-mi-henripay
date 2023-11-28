@@ -3,32 +3,33 @@ import s from "./ModalCookies.module.scss";
 import { useRef, MouseEvent, useContext } from "react";
 import { ModalCookiesContext } from "../../../contexts/modalCookiesContext";
 import Card from "@/components/atoms/Card/Card";
+import IcCookies from "@/components/atoms/Icons/IcCookies";
+import Button from "@/components/atoms/Button/Button";
 
 const ModalCookies = () => {
   const { closeModal, isOpen } = useContext(ModalCookiesContext);
-  const modalRef = useRef(null);
+  const modalRef = useRef<HTMLDivElement | null>(null);
   const handleClickOutside = (e: MouseEvent) => {
-    console.log(e.target !== modalRef.current);
-    if (e.target !== modalRef.current) {
+    if (e.target !== modalRef.current && !modalRef.current?.contains(e.target as Node)) {
       closeModal();
     }
+  };
+
+  const onAccept = () => {
+    localStorage.setItem("cookiesAccepted", "true");
+    closeModal();
   };
 
   return (
     <div className={clsx(s._Wrapper, isOpen && s._Open)} onClick={(e) => handleClickOutside(e)}>
       <Card className={s._Container} ref={modalRef} variant="gradient">
         <div className={s._Content}>
-          <h1 className={s._Heading}>Cookies Policy</h1>
-          <p className={s._Paragraph}>
-            We use cookies to improve your experience on our site. To find out more, read our{" "}
-            <a href="/privacy-policy" className={s._Link}>
-              privacy policy
-            </a>
-            .
-          </p>
-          <button className={s._Button} onClick={closeModal}>
-            Got it!
-          </button>
+          <IcCookies />
+          <h1 className={s._Heading}>COOKIES!</h1>
+          <p className="body-1 white text-center">We use cookies to collect data to improve your experience. Select "Accept All" to allow them to be used.</p>
+          <Button className={s._Button} onClick={onAccept}>
+            Accept all cookies
+          </Button>
         </div>
       </Card>
     </div>

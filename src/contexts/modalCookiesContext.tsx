@@ -15,9 +15,8 @@ const ModalCookiesProvider = ({ children }: { children: ReactNode }) => {
     const closeModal = () => setIsOpen(false);
     
     useEffect(() => {
-        const cookies = document.cookie;
-        const hasCookies = cookies.includes("cookies=true");
-        if (!hasCookies) {
+        const cookiesAccepted = localStorage.getItem("cookiesAccepted");
+        if (!cookiesAccepted) {
             openModal();
         }
     }, []);

@@ -14,44 +14,33 @@
         display: block;
     }
 
-    ._Content{
+    ._Container {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 90%;
-        max-width: 500px;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0,0,0,.2);
-        text-align: center;
+        width: 569px;
+        border-radius: 20px;
+        overflow: hidden;
 
-        ._Title{
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
+        ._Content {
+            z-index: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 44px 45px;
+            justify-content: center;
+            align-items: center;
 
-        ._Description{
-            font-size: 1rem;
-            font-weight: 400;
-            margin-bottom: 20px;
-        }
-
-        ._Button{
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #000;
-            color: #fff;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all .3s ease-in-out;
-
-            &:hover{
-                background-color: #fff;
-                color: #000;
+            ._Heading {
+                font-size: 24px;
+                font-weight: 600;
+                text-transform: capitalize;
+                color: v.$white;
             }
         }
+
+
     }
 }
