@@ -45,7 +45,7 @@ const Home = () => {
                     </Button>
                   </div>
                 </div>
-                <video loop muted autoPlay width={642} height={377}>
+                <video loop muted autoPlay width={642} height={377} className={s._HeroVideo}>
                   <source type="video/webm" src={HeroImage} />
                 </video>
               </div>

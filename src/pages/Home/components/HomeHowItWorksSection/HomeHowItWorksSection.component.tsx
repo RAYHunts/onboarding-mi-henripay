@@ -1,13 +1,16 @@
-import { useContext } from "react";
-import clsx from "clsx";
-import Maze from "@/components/atoms/Svgs/Maze";
-import s from "./HomeHowItWorks.module.scss";
 import Bedge from "@/components/atoms/Bedge/Bedge";
-import MazeSigns from "@/components/atoms/Svgs/MazeSigns";
-import IcVersus from "@/components/atoms/Icons/IcVersus";
-import WithHenriPay from "@/components/atoms/Svgs/WithHenriPay";
 import Button from "@/components/atoms/Button/Button";
+import IcVersus from "@/components/atoms/Icons/IcVersus";
+// import Maze from "@/components/atoms/Svgs/Maze";
+// import MazeSigns from "@/components/atoms/Svgs/MazeSigns";
+import MazeImage from "@/assets/images/maze.webp";
+import FloatingSign from "@/assets/images/floating-on-maze.webp";
+// import WithHenriPay from "@/components/atoms/Svgs/WithHenriPay";
+import WithHenripay from "@/assets/images/with-henripay.webp";
+import clsx from "clsx";
+import { useContext } from "react";
 import { ModalContactContext } from "../../../../contexts/modalContactContext";
+import s from "./HomeHowItWorks.module.scss";
 
 
 const HomeHowItWorksSection = () => {
@@ -32,8 +35,10 @@ const HomeHowItWorksSection = () => {
               Without Henripay
             </Bedge>
             <div className={s._Maze}>
-              <Maze />
-              <MazeSigns />
+              {/* <Maze />
+              <MazeSigns /> */}
+              <img src={MazeImage} alt="maze" className={s._MazeImage} />
+              <img src={FloatingSign} alt="floating sign" className={s._FloatingSign} />
             </div>
           </div>
           <div className={s._Versus}>
@@ -43,7 +48,8 @@ const HomeHowItWorksSection = () => {
             <Bedge variant="green" className={s._Bedge}>
               With HenriPay
             </Bedge>
-            <WithHenriPay />
+            {/* <WithHenriPay /> */}
+            <img src={WithHenripay} alt="with henripay" className={s._WithHenripayImage} width="444" height="228" />
           </div>
         </div>
         <div className={s._Integrate}>

@@ -45,9 +45,8 @@
 
                     @include m.tablet {
                         width: 100%;
-                        aspect-ratio: 460/306;
-                        object-fit: contain;
-                        height: calc(100% * 306 / 460);
+                        height: auto;
+                        max-width: 800px;
                         order: 2;
                     }
                 }

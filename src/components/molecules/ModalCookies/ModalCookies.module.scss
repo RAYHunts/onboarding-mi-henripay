@@ -1,4 +1,6 @@
 @use "/src/styles/abstracts/variables" as v;
+@use "/src/styles/abstracts/mixins" as m;
+
 ._Wrapper {
     // backdrop
     position: fixed;
@@ -10,11 +12,11 @@
     background-color: rgba($color: v.$black, $alpha: 0.5);
     display: none;
 
-    &._Open{
+    &._Open {
         display: block;
     }
 
-    
+
 
     ._Container {
         position: absolute;
@@ -24,6 +26,11 @@
         width: 569px;
         border-radius: 20px;
         overflow: hidden;
+
+        @include m.mobile {
+            max-width: 90%;
+            margin-inline: auto;
+        }
 
         ._CloseButton {
             position: absolute;

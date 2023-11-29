@@ -26,7 +26,7 @@ const HomeHowToGetItSection = () => {
               </p>
             </div>
             <div className={s._Content}>
-              <img src={howToGet} alt="How to get it" width="604px" height="379px" />
+              <img src={howToGet} alt="How to get it" width="604px" height="379px" className={s._HowToGetItImage} />
               <div className={s._CardWrapper}>
                 <div className={s._Card}>
                   <div className={s._CardContent}>
@@ -67,23 +67,6 @@ const HomeHowToGetItSection = () => {
       </div>
       <div className={s._Container}>
         <div className="container">
-          {/* <div className={s._SellUrWeb3}>
-            <div className={s._CardWrapper}>
-              <div className={s._Card}>
-                <div className={s._TextContent}>
-                  <h4 className="display-2 white">Sell your web3 products to anyone.</h4>
-                  <p className="white">
-                    Web3 is changing the way products are marketed. As a leading payment service provider with software specifically designed for web3 payments, we support suppliers of web3 products with a prompt payment solution that does
-                    not reject any payment method (local or coins).
-                  </p>
-                </div>
-              </div>
-
-              <span className={s._LeftCircle}></span>
-              <span className={s._RightCircle}></span>
-            </div>
-            <img src={coins} alt="Coins" width="470px" height="350px" className={s._Coins} />
-          </div> */}
           <div className={s._SellUrWeb3}>
               <div className={s._Card}>
                 <span className={s._LeftCircle}></span>
@@ -99,8 +82,6 @@ const HomeHowToGetItSection = () => {
                 </div>
                 <img src={coins} alt="Coins" width="470px" height="350px" className={s._Coins} />
               </div>
-            {/* <div className={s._CardWrapper}>
-            </div> */}
           </div>
         </div>
       </div>

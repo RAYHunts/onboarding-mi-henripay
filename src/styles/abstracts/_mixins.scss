@@ -5,13 +5,13 @@
 	margin-inline: auto;
 
 	// @media (max-width: v.$laptop-down) {
-	// 	max-width: 100%;
+	// 	max-width: calc(v.$laptop-down - 32px);
 	// 	margin-inline: 26px;
 	// }
 
 	@media (max-width: v.$tablet-down) {
-		max-width: 100%;
-		margin-inline: 18px;
+		max-width: 940px;
+		margin-inline: 24px;
 	}
 
 	@media (max-width: v.$mobile-down) {

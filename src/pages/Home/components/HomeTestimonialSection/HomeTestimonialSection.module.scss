@@ -1,4 +1,5 @@
 @use "/src/styles/abstracts/variables" as v;
+@use "/src/styles/abstracts/mixins" as m;
 
 ._Wrapper {
     padding: 96px 0;
@@ -8,6 +9,11 @@
             gap: 30px;
             justify-content: center;
 
+            @include m.tablet {
+                flex-direction: column;
+                gap: 60px;
+            }
+
             ._TextContent {
                 width: 346px;
             }
@@ -15,6 +21,12 @@
             ._Testimonials {
                 display: flex;
                 gap: 30px;
+
+                @include m.mobile {
+                    gap: 20px;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
 
 
                 ._Testimonial {

@@ -1,4 +1,5 @@
 @use "/src/styles/abstracts/variables" as v;
+@use "/src/styles/abstracts/mixins" as m;
 
 ._Wrapper {
     padding: 96px 0;
@@ -55,23 +56,46 @@
             padding: 68px 0;
             position: relative;
 
-            ._WithoutHenriPay {
-                ._Maze {
-                    display: grid;
-                    width: 100%;
-                    object-fit: contain;
-                    grid-template-areas: stack;
+            @include m.tablet {
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+                margin-top: 24px;
 
-                    > svg {
-                        grid-area: stack;
-                        position: relative;
+                ._WithHenriPay {
+                    margin-top: 40px;
+                }
+            }
+
+            ._WithoutHenriPay {
+                width: 100%;
+                position: relative;
+
+                ._Maze {
+                    // display: grid;
+                    width: 100%;
+                    aspect-ratio: 107/55;
+                    position: relative;
+                    // object-fit: contain;
+                    // grid-template-areas: stack;
+
+                    @include m.tablet {
+                        max-width: 600px;
+                        margin-inline: auto;
                     }
 
-                    >:nth-child(2) {
+                    ._MazeImage {
+                        width: 100%;
+                        object-fit: contain;
+                    }
+
+                    ._FloatingSign {
+                        position: absolute;
                         z-index: 1;
-                        top: -45px;
-                        right: -60px;
+                        top: -18%;
+                        right: 5%;
                         animation: float 3s ease-in infinite alternate;
+                        width: 80%;
                     }
                 }
             }
@@ -81,25 +105,23 @@
             }
 
             ._WithHenriPay {
-                width: min-content;
+                position: relative;
+                height: 100%;
+                ._WithHenripayImage {
+                    @include m.tablet {
+                        width: 100%;
+                        height: auto;
+                        max-width: 800px;
+                    }
+                }
             }
 
             ._Bedge {
-                position: relative;
-                top: -30px;
+                position: absolute;
+                top: -50px;
                 text-wrap: nowrap;
-                margin: 0 auto;
-            }
-
-            @media (max-width: v.$tablet-down) {
-                flex-direction: column;
-                gap: 20px;
-                align-items: center;
-
-                ._WithHenriPay {
-                    margin-top: 40px;
-                }
-                
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
 

@@ -9,7 +9,7 @@
 
             :global {
                 .swiper-slide {
-                    width: 175px !important;
+                    width: 175px;
                     height: 219px;
                     overflow: hidden;
                     background: linear-gradient(274deg, v.$primary 0%, v.$secondary 100%);
