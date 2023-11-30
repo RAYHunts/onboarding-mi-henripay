@@ -72,6 +72,12 @@
                         background: rgba($color: v.$black, $alpha: 0.1);
                         position: relative;
                         z-index: 1;
+                        max-width: 401px;
+                        
+                        @include m.mobile {
+                            width: -webkit-fill-available;
+                            height:400px;
+                        }
 
                         ._CardContent {
                             text-align: left;
@@ -79,18 +85,30 @@
                             display: flex;
                             flex-direction: column;
                             gap: 16px;
+
+                            @include m.mobile {
+                                width: 70%;
+                                max-width: 281px;  
+                            }
                         }
 
                         ._VrMan {
                             position: absolute;
                             bottom: 0;
                             right: 0;
+
+                            @include m.mobile {
+                                width: 60%;
+                                max-width: 200px;
+                                height: auto;
+                            }
                         }
 
                         ._HenriPayLogo {
                             position: absolute;
                             top: 33px;
                             right: 33px;
+
                         }
                     }
 
